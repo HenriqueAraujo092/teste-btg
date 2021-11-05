@@ -21,7 +21,7 @@ export class CharactersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.charactersService.list().subscribe(characters => {
+    this.charactersService.all().subscribe(characters => {
       this.characters$ = characters;
       this.characters$ = this.characters$.data.results
       console.log(this.characters$);

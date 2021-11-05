@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { throwError } from 'rxjs';
-import { tap, map, take, catchError } from 'rxjs/operators'
+import { tap, map, delay, catchError } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -28,12 +28,14 @@ export class CharactersService {
     return throwError(errorMessage);
   }
 
-  list() {
+  all() {
     // return this.httpClient.get(this.API).pipe(
     //   take(1),
     //   tap(characters => console.log(characters))
     // );
-    return this.httpClient.get(this.allCharacters).pipe(catchError(this.handleError));
+    return this.httpClient.get(this.allCharacters).pipe(
+      delay(1500),
+      catchError(this.handleError));
   }
 
   characters() {
