@@ -1,21 +1,22 @@
 <section class="content">
-  <mat-card><mat-card class="example-card">
+  <mat-card>
+    <mat-card *ngFor="let c of characters$" class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>teste</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-title>{{c.name}}</mat-card-title>
+      <mat-card-subtitle>Cod - {{c.id}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <img mat-card-image src="{{c.thumbnail.path + '.' + c.thumbnail.extension}}" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
-        teste
+        {{c.description ? ( c.description | slice:0:100 ) : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium fugit praesentium beatae quibusdam inventore vel enim minima? Laudantium consectetur incidunt dolores laboriosam eligendi alias?' }}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button mat-raised-button color="primary" routerLink="details">Mais detalhes...</button>
     </mat-card-actions>
-  </mat-card></mat-card>
+  </mat-card>
+</mat-card>
 </section>
 
 

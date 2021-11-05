@@ -1,0 +1,8 @@
+<section>
+  <mat-card *ngFor="let cs of characterSelected">
+    <h1>- {{cs.name}}</h1>
+    <div>
+      <img src="{{cs.thumbnail.path + '.' + cs.thumbnail.extension}}" alt="Photo of a Shiba Inu">
+    </div>
+  </mat-card>
+</section>
