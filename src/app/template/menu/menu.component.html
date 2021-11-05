@@ -1,9 +1,33 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+  <mat-sidenav #drawer class="sidenav" mode="side" fixedInViewport="true">
+    <span>
+      <a>
+        <img src="https://t.ctcdn.com.br/Iyf-_zqRFQG3D84RfWVHRUL4dgU=/512x288/smart/i886.jpeg" alt="logo">
+      </a>
+    </span>
     <mat-nav-list class="nav-list">
-      <a mat-list-item>Inicio</a>
-      <a mat-list-item>Personagens</a>
-      <a mat-list-item>Quadrinhos</a>
+      <a mat-list-item routerLink="home" (click)="drawer.toggle()">Inicio</a>
+      <a mat-list-item routerLink="characters" (click)="drawer.toggle()">Personagens</a>
+      <a mat-list-item routerLink="comics" (click)="drawer.toggle()">Quadrinhos</a>
     </mat-nav-list>
   </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: #f1f5f9">
+
+    <mat-toolbar class="footer" color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span>ARANHAVERSO</span>
+    </mat-toolbar>
+      <router-outlet></router-outlet>
+    <br>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
 </mat-sidenav-container>

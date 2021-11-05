@@ -2,11 +2,19 @@
   position: fixed;
   bottom: 0;
 
-  display: flex;
-  justify-content: flex-end;
+  justify-content: left;
+}
 
+span {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer > span {
   font-size: 1rem;
+}
+
+img {
+  padding-top: 7px;
+  max-width:100px;
+  max-height:50px;
 }

@@ -6,3 +6,27 @@
 .sidenav a {
   color: #fff;
 }
+
+mat-toolbar span {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  padding: 3px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+span a img {
+  max-height:111px;
+}
+
+mat-sidenav {
+  border-right: solid;
+  color: white;
+}
