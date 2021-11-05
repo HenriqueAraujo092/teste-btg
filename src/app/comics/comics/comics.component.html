@@ -1,7 +1,6 @@
-<section class="content">
+<section class="container center">
   <div *ngIf="comics$; else loading">
-    <mat-card class="mat-elevation-z9">
-
+    <mat-card class="mat-elevation-z9 item">
         <mat-card *ngFor="let c of comics$" class="example-card mat-elevation-z5">
           <mat-card-header>
             <mat-card-title>{{c.title}}</mat-card-title>

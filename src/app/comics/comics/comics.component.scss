@@ -1,9 +1,7 @@
-.content {
-  padding: 15px;
-}
-
 .example-card {
   max-width: 200px;
+  vertical-align: top;
+  height: 550px;
 }
 
 .example-header-image {
@@ -25,5 +23,24 @@ mat-card {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  align-self: baseline;
+	margin: 5px;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 1.5em;
 }
 

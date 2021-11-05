@@ -1,7 +1,7 @@
-<section class="content">
-  <div *ngIf="characters$; else loading">
-    <mat-card class="mat-elevation-z9">
-      <mat-card *ngFor="let c of characters$" class="example-card mat-elevation-z5">
+<section class="container center">
+	<div *ngIf="characters$; else loading">
+    <mat-card class="mat-elevation-z9 item">
+      <mat-card mat-card *ngFor="let c of characters$" class="example-card mat-elevation-z5">
       <mat-card-header>
         <mat-card-title>{{c.name}}</mat-card-title>
         <mat-card-subtitle>Cod - {{c.id}}</mat-card-subtitle>
@@ -13,7 +13,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="details">Mais detalhes...</button>
+        <button mat-raised-button color="primary" routerLink="details/{{c.id}}">Mais detalhes...</button>
       </mat-card-actions>
       </mat-card>
     </mat-card>
@@ -24,7 +24,6 @@
       <mat-spinner></mat-spinner>
     </div>
   </ng-template>
-
 </section>
 
 
