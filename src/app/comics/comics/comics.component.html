@@ -4,7 +4,6 @@
         <mat-card *ngFor="let c of comics$" class="example-card mat-elevation-z5">
           <mat-card-header>
             <mat-card-title>{{c.title}}</mat-card-title>
-            <mat-card-subtitle>Cod - {{c.id}}</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image src="{{c.thumbnail.path + '.' + c.thumbnail.extension}}" alt="Photo of a Shiba Inu">
           <mat-card-content>
