@@ -1,5 +1,5 @@
 <section>
-  <mat-card class="mat-elevation-z9">
+  <mat-card *ngIf="characterSelected; else loading" class="mat-elevation-z9">
     <mat-card *ngFor="let character of characterSelected" class="example-card">
       <mat-card-title-group>
         <mat-card-title>{{character.name}}</mat-card-title>
@@ -30,4 +30,10 @@
 
     </mat-card>
   </mat-card>
+
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
 </section>
