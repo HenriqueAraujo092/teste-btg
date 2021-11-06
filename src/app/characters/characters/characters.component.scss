@@ -4,7 +4,7 @@
 
 .example-card {
   max-width: 200px;
-  vertical-align: top;
+  vertical-align: bottom;
   height: 450px;
 }
 
@@ -59,4 +59,7 @@ mat-card img {
 	font-size: 1.5em;
 }
 
+mat-raised-button {
+  bottom: 0;
+}
 
