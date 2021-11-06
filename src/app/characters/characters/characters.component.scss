@@ -30,6 +30,7 @@ mat-card img {
 .loading-spinner {
   padding: 25px;
   display: flex;
+  padding-top: 185px;
   align-items: center;
   justify-content: center;
 }
@@ -37,12 +38,18 @@ mat-card img {
 .container {
 	margin: 0 auto;
 	display: flex;
-	border: 1px solid #ccc;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .center {
 	justify-content: center;
-  align-items: center;
+  // align-items: center;
+  align-items: stretch;
 }
 
 .item {

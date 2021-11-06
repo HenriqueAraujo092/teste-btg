@@ -1,8 +1,26 @@
 <section>
-  <mat-card *ngFor="let cs of characterSelected">
-    <h1>- {{cs.name}}</h1>
-    <div>
-      <img src="{{cs.thumbnail.path + '.' + cs.thumbnail.extension}}" alt="Photo of a Shiba Inu">
-    </div>
+  <mat-card class="mat-elevation-z9">
+    <mat-card *ngFor="let character of characterSelected" class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>{{character.name}}</mat-card-title>
+        <mat-card-subtitle>Id - {{character.id}}</mat-card-subtitle>
+        <img mat-card-lg-image src="{{character.thumbnail.path + '.' + character.thumbnail.extension}}" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{character.description}}
+        <h4>- Series</h4>
+        <mat-list role="list" *ngFor="let serie of series">
+          <mat-list-item role="listitem">- {{serie.name | slice:0:50 }}</mat-list-item>
+        </mat-list>
+        <h4>- Stories</h4>
+        <mat-list role="list" *ngFor="let store of stories">
+          <mat-list-item role="listitem">- {{store.name | slice:0:50 }}</mat-list-item>
+        </mat-list>
+        <h4>- Comics</h4>
+        <mat-list role="list" *ngFor="let comic of comics">
+          <mat-list-item role="listitem">- {{comic.name | slice:0:50 }}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
   </mat-card>
 </section>

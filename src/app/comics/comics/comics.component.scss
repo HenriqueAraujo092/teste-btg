@@ -1,6 +1,6 @@
 .example-card {
   max-width: 200px;
-  vertical-align: top;
+  vertical-align: bottom;
   height: 550px;
 }
 
@@ -24,12 +24,12 @@ mat-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 185px;
 }
 
 .container {
 	margin: 0 auto;
 	display: flex;
-	border: 1px solid #ccc;
 }
 
 .center {

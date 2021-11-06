@@ -8,10 +8,6 @@
   border-bottom: solid;
 }
 
-// mat-toolbar {
-//   position: fixed;
-// }
-
 mat-toolbar span {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: auto;
@@ -27,4 +23,8 @@ span a img {
 mat-sidenav {
   border-right: solid;
   color: white;
+}
+
+mat-sidenav-container {
+  height: 100vh;
 }

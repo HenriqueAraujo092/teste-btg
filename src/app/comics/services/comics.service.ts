@@ -27,7 +27,7 @@ export class ComicsService {
 
   all() {
     return this.httpClient.get(this.allComics).pipe(
-      delay(1500),
+      delay(1000),
       catchError(this.handleError));
   }
 

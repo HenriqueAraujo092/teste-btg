@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CharactersDetailsComponent } from './characters-details/characters-details.component';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CharactersDetailsComponent } from './characters-details/characters-deta
     CharactersRoutingModule,
     MatCardModule,
     MatGridListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatListModule
   ]
 })
 export class CharactersModule { }
