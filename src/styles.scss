@@ -36,4 +36,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
+// @keyframes neon {
+//   from {
+//     filter: drop-shadow(0 0 0 var(--cor-neon));
+//   }
+//   to {
+//     filter: drop-shadow(0 0 50px var(--cor-neon));
+//   }
+// }
+
+// div {
+//   animation: neon 1s alternate infinite ease-in-out;
+//   --cor-neon: #fff;
+// }
+
 
