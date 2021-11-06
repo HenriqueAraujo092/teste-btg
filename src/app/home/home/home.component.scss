@@ -1,72 +1,35 @@
-// img {
-//   width: 100%;
-//   opacity : 0.7;
-//   text-align: center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   background-position: center;
-
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-//   // width: 50%;
-
-// }
-
-// @media screen and (min-width: 900px) {
-// 	img {
-//     width: 100%;
-//     opacity : 0.7;
-//     text-align: center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-position: center;
-
-//     display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-//     // width: 50%;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-// 	img {
-//     width: 1205px;
-//     opacity : 0.7;
-//     text-align: center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-position: center;
-
-//     display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-//   }
-// }
 
 section {
 	height: 100vh;
-  // background-image:url('http://www.superamiches.com/wp-content/uploads/2018/12/spiderverse.jpg');
-  // background-image: url('https://images-na.ssl-images-amazon.com/images/S/pv-target-images/07ef296bdce51185c9954c46c86c270f20a9554a4c0addf1a253bbb684ba78ba._RI_V_TTW_.jpg');
-  // background-image: url('https://66.media.tumblr.com/fe3e966760c8646a3adbd5ad63e7af6d/tumblr_pygdeeksA71ut1d6co1_540.gif');
   background-image: url('https://i.pinimg.com/originals/bc/35/70/bc3570011c9d166f7a2b39d921f2a4f6.gif');
-  // opacity : 0.7;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-
   margin-left: auto;
   margin-right: auto;
 }
 
 div {
+  position: flex;
   font-family: arial, helvetica, sans-serif;
+  font: 'Kalam', cursive;
   text-align: center;
-  padding-top: 200px;
   color: white;
+  padding-top: 60vh;
+}
+
+@keyframes neon {
+  from {
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to {
+    filter: drop-shadow(0 0 50px var(--cor-neon));
+  }
+}
+
+div {
+  animation: neon 1s alternate infinite ease-in-out;
+  --cor-neon: #fff;
 }
 
