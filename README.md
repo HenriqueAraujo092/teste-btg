@@ -1,3 +1,34 @@
+Breve documentação:
+
+Projeto base criado com potencial de ser continuado por alguem que desejar fazer...
+
+Por gentileza seguir os padroes do GitFlow para continuação...
+
+branch develop - Todas features estáveis
+
+release - Verificações da features
+features - feature/nova modificaçao
+hotfix - Colocar direto pra master e develop
+
+Possiveis atualizações futuras...
+
+- Colocar restante das versões do homem aranha
+- Colocar opção para pesquisar ou filtrar
+- Pagina inicial pode ser mais elaborada, colocando outras opções de acesso e frases mais bonitas e mais customizadas
+
+Para se conectar com a API é bem simples...
+- Faça cadastro no site (https://developer.marvel.com)
+- Ao concluir o cadastro vc recebera suas informações de acesso que são: chave publica e chave privada, utilizaremos elas para gerar um hash de acesso a API
+- Para continuarmos precisa-se entender como funcionam as rotas de acesso...
+	- Ao final de cada endpoint será solicitado um ts(TimesTemp), a sua chave publica(apiKey) mais um hash, que é um md5 gerado a partir de um ts+chavePublica+ChavePrivada
+
+Exemplo:
+https://gateway.marvel.com:443/v1/public/characters?ts=[TIMES_TAMP]&apikey=[CHAVE_PUBLICA]&hash=[MD5_DE_timesTemp+chavePublica+chavePrivada]
+
+- Se desejar pode fazer um pequeno método para gerar essa hash, pegandos dados informados e gerando a md5 e aplicando direto no serviço do componente. Como nesse pequeno projeto precisei acessar somente 3 rotas, gerei um hash e so coloquei na chamada.
+
+Se ficar com mais alguma dúvida ou quiser algo mais detalhado, ler direto na documentação (https://developer.marvel.com/documentation/getting_started)
+
 # TesteBtg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
